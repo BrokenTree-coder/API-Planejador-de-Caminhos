@@ -6,5 +6,5 @@
 
 
 
-**Ferramentas:** foi feita a implementação de rotas RESTful, a manipulação de arquivos JSON como banco de dados, e a aplicaçao de segurança básica com hashing de dados. Mais especificamente, as dependencias usadas até o desenvolvimento final foram: express, jsonwebtoken, bcrypt, express-validator, lowdb, dotenv, pug, mongodb, e mongoose.
+**Ferramentas:** foi feita a implementação de rotas RESTful, a manipulação de arquivos JSON como banco de dados, e a aplicaçao de segurança básica com hashing de dados. Mais especificamente, as dependencias usadas até o desenvolvimento final foram: express, jsonwebtoken, bcrypt, express-validator, lowdb, dotenv, pug, mongodb, mongoose, e pug.
 
