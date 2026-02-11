@@ -1,5 +1,5 @@
 ===========================================================
-README - API Planejador de Caminhos
+API Planejador de Caminhos
 ===========================================================
 
 Aluno: Jean Lucas de Araújo Lima
