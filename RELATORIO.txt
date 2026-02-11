@@ -1,0 +1,184 @@
+===========================================================
+README - API Planejador de Caminhos
+===========================================================
+
+Aluno: Jean Lucas de Araújo Lima
+Disciplina: Desenvolvimento WEB - Backend (2025.2)
+Professor: Diego Cabral
+Trabalho 1
+
+===========================================================
+1. Idealização do Projeto
+===========================================================
+
+Este projeto originou-se de um trabalho anterior realizado na disciplina de Programação Avançada, implementado em C++. O objetivo daquele projeto era desenvolver um "Planejador de Caminhos" capaz de determinar o caminho mais curto entre dois pontos (cidades) em um mapa (especificamente do Rio Grande do Norte), utilizando o algoritmo A* e dados geográficos lidos de arquivos de texto.
+
+A proposta deste trabalho foi traduzir a lógica central e os dados desse projeto C++ para uma API Web moderna, utilizando Node.js e o framework Express.js.
+
+===========================================================
+2. Processo de Tradução (C++ para Node.js/Express)
+===========================================================
+
+A migração envolveu os seguintes passos principais:
+
+--> Migração de Dados: Criação de um script Node.js (`migracao.js`) para ler os arquivos `pontos.txt` e `rotas.txt` e convertê-los para um formato JSON (`db.json`), que serve como banco de dados para a API usando a biblioteca `lowdb`.
+
+--> Tradução do Algoritmo A*: A lógica principal foi traduzida para JavaScript moderno (`async/await`) dentro do `caminho.service.js`, e 'haversine.js'.
+
+===========================================================
+3. Arquitetura da API
+===========================================================
+
+A API foi construída seguindo o padrão de Arquitetura em Camadas com Separação de Responsabilidades (SoC), conforme apresentado na Aula 15. As principais camadas são:
+
+--> Rotas (`src/rotas/`): Mapeiam URLs e métodos HTTP para os Controladores, aplicando middlewares de autenticação, autorização e validação.
+
+--> Middlewares (`src/middlewares/`): Funções que interceptam requisições para tarefas como autenticação (`auth.middleware.js`), autorização (`permission.middleware.js`), tratamento de erros de validação (`validation.middleware.js`) e tratamento global de erros (`error.middleware.js`).
+
+--> Validadores (`src/validators/`): Definem regras de validação para os dados de entrada usando `express-validator`.
+
+--> Controladores (`src/controllers/`): Orquestram o fluxo da requisição HTTP. Recebem `req`, `res`, extraem dados, chamam o Serviço apropriado e enviam a resposta.
+
+--> Serviços (`src/services/`): Contêm a lógica de negócio principal da aplicação (regras, orquestração de tarefas, algoritmo A*). Chamam os Repositórios para interagir com os dados.
+
+--> Repositórios (`src/repositories/`): Encapsulam toda a lógica de acesso ao banco de dados (`lowdb`). São a única camada que interage diretamente com `db.data` e `db.write`.
+
+--> DTOs (`src/dtos/`): (Data Transfer Objects) Usados para formatar dados de saída, garantindo consistência e segurança (ex: omitir senhas).
+
+--> Utils (`src/utils/`): Funções auxiliares genéricas (ex: cálculo de Haversine).
+
+--> Configuração (`database.js`, `index.js`, `.env`): Inicialização do app, banco de dados, variáveis de ambiente.
+
+===========================================================
+4. Funcionalidades Implementadas
+===========================================================
+
+A API implementa todas as funcionalidades requeridas no Trabalho 1, e algumas extras, de aulas posteriores, como a separação da aula 15:
+
+-->CRUD de Pontos: Criação, Leitura (todos e por ID), Atualização (total e parcial) e Deleção de Pontos.
+
+-->CRUD de Rotas: Criação, Leitura (todas e por ID), Atualização (total e parcial) e Deleção de Rotas.
+
+-->CRUD de Usuários: Criação, Leitura (todos e por ID), Atualização e Deleção de Usuários.
+
+-->Cálculo de Caminho: Endpoint que recebe IDs de origem e destino e retorna o caminho mais curto usando o algoritmo A*. [MAIS IMPORTANTE]
+
+-->Autenticação: Sistema de login (`/api/auth/login`) que retorna um token JWT para usuários válidos. Rotas principais são protegidas, exigindo um token válido.
+
+-->Autorização (RBAC): Rotas de escrita (POST, PUT, PATCH, DELETE) para Pontos, Rotas e Usuários são protegidas e só podem ser acessadas por usuários com a role "admin".
+
+-->Validação de Dados: Todas as entradas de rotas (body, params, query) são validadas usando `express-validator`.
+
+-->Persistência de Dados: Os dados de Pontos, Rotas e Usuários são armazenados no arquivo `db.json` usando `lowdb`, persistindo entre reinicializações.
+
+-->Hashing de Senhas: As senhas dos usuários são armazenadas de forma segura usando hash bcrypt.
+
+-->Interface Web Básica: Uma página inicial renderizada no servidor (`/`) exibe as listas de Pontos e Rotas usando Pug.
+
+===========================================================
+5. Rotas e Requisições da API
+===========================================================
+
+A API oferece endpoints RESTful sob o prefixo base `/api/`. O acesso à maioria das rotas requer autenticação via Token JWT, que deve ser obtido através do endpoint `POST /api/auth/login`. O token deve ser enviado no cabeçalho `Authorization` como `Bearer <seu_token>`.
+
+As principais funcionalidades incluem:
+
+--> Autenticação (`/api/auth`): Permite aos usuários obterem um token JWT fornecendo email e senha.
+
+--> Gerenciamento de Usuários (`/api/users`): Oferece operações CRUD completas (GET, POST, PUT, PATCH, DELETE) para usuários. A criação, atualização e exclusão de usuários são restritas a usuários com a role 'admin'.
+
+--> Gerenciamento de Pontos (`/api/pontos`): Oferece operações CRUD completas para os pontos geográficos do mapa. A criação, atualização e exclusão são restritas a usuários 'admin'.
+
+--> Gerenciamento de Rotas (`/api/rotas`): Oferece operações CRUD completas para as rotas que conectam os pontos. A criação, atualização e exclusão são restritas a usuários 'admin'.
+
+--> Cálculo de Caminho (`/api/caminho`): Permite a qualquer usuário autenticado calcular o caminho mais curto entre dois pontos, fornecendo os IDs de origem e destino como query parameters (`GET /api/caminho?origem=...&destino=...`).
+
+Todas as rotas que recebem dados (via `body`, `params` ou `query`) possuem validação de entrada. As respostas seguem os padrões REST, utilizando códigos de status HTTP apropriados (2xx para sucesso, 4xx para erros do cliente, 5xx para erros do servidor) e retornando dados em formato JSON. A interface web básica (`GET /`) é pública e renderiza uma visão geral dos pontos e rotas.
+
+===========================================================
+6. Credenciais de Acesso para Testes
+===========================================================
+
+Os seguintes usuários estão no `db.json` para fins de teste:
+
+--> User admin:
+    {
+      "email": "jean.lucas@example.com",
+      "password": "0703",
+    },
+
+--> Users ordinários:
+    {
+      "email": "joao.victor@example.com",
+      "password": "0901",
+    },
+    {
+      "email": "sarah.maria@example.com",
+      "password": "0707",
+    }
+
+Usar a rota `POST /api/auth/login` com o email e a senha original, aqui disponibilizados, para obter o token JWT correspondente.
+
+===========================================================
+7. Configuração de Ambiente (.env)
+===========================================================
+
+A API utiliza um arquivo `.env` na raiz do projeto.
+
+--> `JWT_SECRET`: Essa variável contém o segredo usado para assinar e verificar os tokens JWT. É crucial para a segurança da autenticação. 
+--> JWT_SECRET = 'sua-chave-super-secreta-e-longa-12345'
+
+
+===========================================================
+8. Endpoint Principal: Cálculo de Caminho (`GET /api/caminho`)
+===========================================================
+
+Este é o endpoint central da API, pois implementa a funcionalidade principal do projeto original em C++: encontrar o caminho mais curto entre dois pontos usando o algoritmo A*.
+
+--> Método: `GET`
+--> URL: `/api/caminho`
+--> Autenticação: Requer usuário autenticado (qualquer role). O token JWT deve ser enviado no cabeçalho `Authorization: Bearer <token>`.
+--> Parâmetros de Consulta (Query Params):
+    --> `origem`: Obrigatório. O ID do ponto de partida (ex: `#1`). Deve ser codificado na URL como `%231`.
+    --> `destino`: Obrigatório. O ID do ponto de chegada (ex: `#2`). Deve ser codificado na URL como `%232`.
+    --> Exemplo de URL Completa: `http://localhost:3000/api/caminho?origem=%231&destino=%232`
+--> Resposta de Sucesso (`200 OK`): Retorna um objeto JSON contendo o resultado do cálculo:
+    {
+      "mensagem": "Caminho encontrado com sucesso!" | "Nenhum caminho foi encontrado.",
+      "comprimento": 113.8, // Comprimento total em KM, ou -1.0 se não houver caminho
+      "numAberto": 5,     // Número final de nós no conjunto Aberto do A*
+      "numFechado": 10,    // Número final de nós no conjunto Fechado do A*
+      "caminho": [        // Array ordenado de trechos do caminho
+        {
+          "idPonto": "#1",
+          "nomePonto": "...",
+          "idRota": null, // Primeira etapa não tem rota de chegada
+          "nomeRota": null,
+          "comprimentoRota": 0
+        },
+        {
+          "idPonto": "#1A",
+          "nomePonto": "...",
+          "idRota": "&101A", // ID da rota que levou a este ponto
+          "nomeRota": "BR101",
+          "comprimentoRota": 7.8 // Comprimento desta rota específica
+        },
+        // ... mais trechos ...
+        {
+          "idPonto": "#2", // Última etapa é o ponto de destino
+          "nomePonto": "...",
+          "idRota": "&Dutra",
+          "nomeRota": "...",
+          "comprimentoRota": 4.2
+        }
+      ]
+    }
+  
+--> Possíveis Erros:
+    --> `400 Bad Request`: Se os parâmetros `origem` ou `destino` estiverem faltando, mal formatados (sem começar com `#`), ou se o `express-validator` detectar outros problemas.
+    --> `401 Unauthorized`: Se o token JWT não for fornecido ou for inválido.
+    --> `404 Not Found`: Se o ID de `origem` ou `destino` fornecido não corresponder a nenhum ponto existente no banco de dados.
+    --> `500 Internal Server Error`: Se ocorrer um erro inesperado durante a execução do algoritmo A*.
+
+===========================================================
+OBS: O pdf 'planejador-especificação' são as instruções para o projeto original da outra disciplina, e o txt 'gabarito de caminhos' tem algumas respostas corretas que eu usei para testar a API. A pasta 'node_modules' foi retirada.
