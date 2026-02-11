@@ -1,0 +1,1013 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nome": "jean lucas",
+      "email": "jean.lucas@example.com",
+      "password": "$2b$10$Ge.GXRBSFiez37R8U06xluyqOazrxeT4TNyi4qEWREpETKfYn2SfC",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "nome": "joao victor",
+      "email": "joao.victor@example.com",
+      "password": "$2b$10$RFg.RQoAXUJez8w0Xxwc/.x8Bl/eZbNdFmuI26TEkTlSWo2tUyIr.",
+      "role": "usuario"
+    },
+    {
+      "id": 3,
+      "nome": "sarah maria",
+      "email": "sarah.maria@example.com",
+      "password": "$2b$10$sHHGDqd6cLoS9y6FB.zev.LSjDC2uoZxqFK4FSlP95m1ZVrY5C4.i",
+      "role": "usuario"
+    }
+  ],
+  "pontos": [
+    {
+      "id": "#1",
+      "nome": "Natal - Viaduto de Ponta Negra",
+      "latitude": -5.8483,
+      "longitude": -35.2086
+    },
+    {
+      "id": "#1A",
+      "nome": "Natal - Viaduto da Urbana",
+      "latitude": -5.8002,
+      "longitude": -35.2384
+    },
+    {
+      "id": "#1B",
+      "nome": "Natal - Estacao Bela Vista",
+      "latitude": -5.7234,
+      "longitude": -35.2793
+    },
+    {
+      "id": "#2",
+      "nome": "Mossoro - Centro",
+      "latitude": -5.192,
+      "longitude": -37.3426
+    },
+    {
+      "id": "#2A",
+      "nome": "Mossoro - Entroncamento 1",
+      "latitude": -5.2261,
+      "longitude": -37.3236
+    },
+    {
+      "id": "#2B",
+      "nome": "Mossoro - Entroncamento 2",
+      "latitude": -5.2259,
+      "longitude": -37.3321
+    },
+    {
+      "id": "#2C",
+      "nome": "Mossoro - Entroncamento 3",
+      "latitude": -5.2183,
+      "longitude": -37.3648
+    },
+    {
+      "id": "#2D",
+      "nome": "Mossoro - Entroncamento 4",
+      "latitude": -5.1936,
+      "longitude": -37.378
+    },
+    {
+      "id": "#2E",
+      "nome": "Mossoro - Jucuri",
+      "latitude": -5.2158,
+      "longitude": -37.4985
+    },
+    {
+      "id": "#3",
+      "nome": "Parnamirim",
+      "latitude": -5.8921,
+      "longitude": -35.257
+    },
+    {
+      "id": "#4",
+      "nome": "Sao Goncalo do Amarante",
+      "latitude": -5.7875,
+      "longitude": -35.3279
+    },
+    {
+      "id": "#4A",
+      "nome": "Sao Goncalo do Amarante - Entroncamento 1",
+      "latitude": -5.7708,
+      "longitude": -35.269
+    },
+    {
+      "id": "#4B",
+      "nome": "Sao Goncalo do Amarante - Entroncamento 2",
+      "latitude": -5.7631,
+      "longitude": -35.2871
+    },
+    {
+      "id": "#5",
+      "nome": "Macaiba",
+      "latitude": -5.8642,
+      "longitude": -35.3441
+    },
+    {
+      "id": "#5A",
+      "nome": "Macaiba - Tabajara",
+      "latitude": -5.8894,
+      "longitude": -35.4891
+    },
+    {
+      "id": "#6",
+      "nome": "Ceara-Mirim",
+      "latitude": -5.6504,
+      "longitude": -35.4261
+    },
+    {
+      "id": "#7",
+      "nome": "Extremoz",
+      "latitude": -5.7058,
+      "longitude": -35.3033
+    },
+    {
+      "id": "#8",
+      "nome": "Caico - Centro",
+      "latitude": -6.4605,
+      "longitude": -37.0961
+    },
+    {
+      "id": "#8A",
+      "nome": "Caico - Entroncamento 1",
+      "latitude": -6.4562,
+      "longitude": -37.0549
+    },
+    {
+      "id": "#8B",
+      "nome": "Caico - Entroncamento 2",
+      "latitude": -6.4293,
+      "longitude": -37.0838
+    },
+    {
+      "id": "#8C",
+      "nome": "Caico - Entroncamento 3",
+      "latitude": -6.4522,
+      "longitude": -37.1267
+    },
+    {
+      "id": "#9",
+      "nome": "Assu",
+      "latitude": -5.6034,
+      "longitude": -36.918
+    },
+    {
+      "id": "#9A",
+      "nome": "Assu - Entroncamento 1",
+      "latitude": -5.5882,
+      "longitude": -36.9683
+    },
+    {
+      "id": "#10",
+      "nome": "Sao Jose de Mipibu",
+      "latitude": -6.0783,
+      "longitude": -35.234
+    },
+    {
+      "id": "#11",
+      "nome": "Currais Novos",
+      "latitude": -6.2775,
+      "longitude": -36.5226
+    },
+    {
+      "id": "#11A",
+      "nome": "Currais Novos - Entroncamento 1",
+      "latitude": -6.2026,
+      "longitude": -36.3985
+    },
+    {
+      "id": "#12",
+      "nome": "Santa Cruz",
+      "latitude": -6.2281,
+      "longitude": -36.018
+    },
+    {
+      "id": "#13",
+      "nome": "Apodi",
+      "latitude": -5.6654,
+      "longitude": -37.7995
+    },
+    {
+      "id": "#13A",
+      "nome": "Apodi - Entrocamento 1",
+      "latitude": -5.7042,
+      "longitude": -37.8048
+    },
+    {
+      "id": "#14",
+      "nome": "Nova Cruz",
+      "latitude": -6.4771,
+      "longitude": -35.4393
+    },
+    {
+      "id": "#15",
+      "nome": "Joao Camara",
+      "latitude": -5.5414,
+      "longitude": -35.8029
+    },
+    {
+      "id": "#16",
+      "nome": "Touros",
+      "latitude": -5.2037,
+      "longitude": -35.4963
+    },
+    {
+      "id": "#17",
+      "nome": "Nisia Floresta",
+      "latitude": -6.0915,
+      "longitude": -35.208
+    },
+    {
+      "id": "#18",
+      "nome": "Pau dos Ferros",
+      "latitude": -6.1125,
+      "longitude": -38.2062
+    },
+    {
+      "id": "#19",
+      "nome": "Canguaretama",
+      "latitude": -6.3936,
+      "longitude": -35.14
+    },
+    {
+      "id": "#20",
+      "nome": "Macau",
+      "latitude": -5.1187,
+      "longitude": -36.6299
+    },
+    {
+      "id": "#20A",
+      "nome": "Macau - Macauzinho",
+      "latitude": -5.1507,
+      "longitude": -36.5956
+    },
+    {
+      "id": "#22",
+      "nome": "Goianinha",
+      "latitude": -6.2699,
+      "longitude": -35.2091
+    },
+    {
+      "id": "#26",
+      "nome": "Santo Antonio",
+      "latitude": -6.3137,
+      "longitude": -35.4789
+    },
+    {
+      "id": "#28",
+      "nome": "Caraubas",
+      "latitude": -5.7801,
+      "longitude": -37.5608
+    },
+    {
+      "id": "#29",
+      "nome": "Jucurutu",
+      "latitude": -6.0316,
+      "longitude": -37.0158
+    },
+    {
+      "id": "#42",
+      "nome": "Alto do Rodrigues - Entroncamento 1",
+      "latitude": -5.2886,
+      "longitude": -36.7598
+    },
+    {
+      "id": "#54",
+      "nome": "Patu",
+      "latitude": -6.0911,
+      "longitude": -37.6404
+    },
+    {
+      "id": "#61",
+      "nome": "Acari",
+      "latitude": -6.4319,
+      "longitude": -36.6398
+    },
+    {
+      "id": "#63",
+      "nome": "Serra Caiada",
+      "latitude": -6.1031,
+      "longitude": -35.7044
+    },
+    {
+      "id": "#72",
+      "nome": "Lajes",
+      "latitude": -5.7055,
+      "longitude": -36.2408
+    },
+    {
+      "id": "#73",
+      "nome": "Campo Grande",
+      "latitude": -5.8684,
+      "longitude": -37.3152
+    },
+    {
+      "id": "#88",
+      "nome": "Riachuelo - Entroncamento 1",
+      "latitude": -5.7676,
+      "longitude": -35.8594
+    },
+    {
+      "id": "#90",
+      "nome": "Itaja",
+      "latitude": -5.6303,
+      "longitude": -36.8634
+    },
+    {
+      "id": "#95",
+      "nome": "Serrinha",
+      "latitude": -6.2696,
+      "longitude": -35.5017
+    },
+    {
+      "id": "#117",
+      "nome": "Santa Maria",
+      "latitude": -5.842,
+      "longitude": -35.6909
+    },
+    {
+      "id": "#143",
+      "nome": "Triunfo Potiguar",
+      "latitude": -5.8591,
+      "longitude": -37.1964
+    },
+    {
+      "id": "#0",
+      "nome": "Fernando de Noronha",
+      "latitude": -3.8461,
+      "longitude": -32.412
+    }
+  ],
+  "rotas": [
+    {
+      "id": "&101A",
+      "nome": "BR101",
+      "extremidades": [
+        "#1",
+        "#1A"
+      ],
+      "comprimento": 7.8
+    },
+    {
+      "id": "&101B",
+      "nome": "BR101",
+      "extremidades": [
+        "#1",
+        "#3"
+      ],
+      "comprimento": 7.8
+    },
+    {
+      "id": "&101C",
+      "nome": "BR101",
+      "extremidades": [
+        "#1A",
+        "#4A"
+      ],
+      "comprimento": 5.1
+    },
+    {
+      "id": "&226A",
+      "nome": "BR226",
+      "extremidades": [
+        "#1A",
+        "#5"
+      ],
+      "comprimento": 16.8
+    },
+    {
+      "id": "&101D",
+      "nome": "BR101",
+      "extremidades": [
+        "#1B",
+        "#4B"
+      ],
+      "comprimento": 5.1
+    },
+    {
+      "id": "&307A",
+      "nome": "RN307",
+      "extremidades": [
+        "#1B",
+        "#7"
+      ],
+      "comprimento": 4.4
+    },
+    {
+      "id": "&101E",
+      "nome": "BR101",
+      "extremidades": [
+        "#1B",
+        "#16"
+      ],
+      "comprimento": 69.1
+    },
+    {
+      "id": "&Dutra",
+      "nome": "Av. Pres. Dutra",
+      "extremidades": [
+        "#2",
+        "#2A"
+      ],
+      "comprimento": 4.2
+    },
+    {
+      "id": "&110A",
+      "nome": "BR110",
+      "extremidades": [
+        "#2",
+        "#2B"
+      ],
+      "comprimento": 4.1
+    },
+    {
+      "id": "&Maran",
+      "nome": "Av. Alberto Maranhao",
+      "extremidades": [
+        "#2",
+        "#2C"
+      ],
+      "comprimento": 4
+    },
+    {
+      "id": "&Camar",
+      "nome": "R. Felipe Camarao",
+      "extremidades": [
+        "#2",
+        "#2D"
+      ],
+      "comprimento": 4.1
+    },
+    {
+      "id": "&110B",
+      "nome": "BR110.RN016",
+      "extremidades": [
+        "#2",
+        "#42"
+      ],
+      "comprimento": 87.2
+    },
+    {
+      "id": "&304A",
+      "nome": "BR304",
+      "extremidades": [
+        "#2A",
+        "#2B"
+      ],
+      "comprimento": 1.2
+    },
+    {
+      "id": "&304B",
+      "nome": "BR304",
+      "extremidades": [
+        "#2A",
+        "#9A"
+      ],
+      "comprimento": 58.4
+    },
+    {
+      "id": "&304C",
+      "nome": "BR304",
+      "extremidades": [
+        "#2B",
+        "#2C"
+      ],
+      "comprimento": 3.7
+    },
+    {
+      "id": "&110C",
+      "nome": "BR110",
+      "extremidades": [
+        "#2B",
+        "#73"
+      ],
+      "comprimento": 77.7
+    },
+    {
+      "id": "&304D",
+      "nome": "BR304",
+      "extremidades": [
+        "#2C",
+        "#2D"
+      ],
+      "comprimento": 3.2
+    },
+    {
+      "id": "&117A",
+      "nome": "RN117",
+      "extremidades": [
+        "#2C",
+        "#28"
+      ],
+      "comprimento": 69
+    },
+    {
+      "id": "&405A",
+      "nome": "BR405",
+      "extremidades": [
+        "#2D",
+        "#2E"
+      ],
+      "comprimento": 13.5
+    },
+    {
+      "id": "&405B",
+      "nome": "BR405",
+      "extremidades": [
+        "#2E",
+        "#13"
+      ],
+      "comprimento": 60.6
+    },
+    {
+      "id": "&226B",
+      "nome": "BR226",
+      "extremidades": [
+        "#3",
+        "#5"
+      ],
+      "comprimento": 10.1
+    },
+    {
+      "id": "&101F",
+      "nome": "BR101",
+      "extremidades": [
+        "#3",
+        "#10"
+      ],
+      "comprimento": 21.2
+    },
+    {
+      "id": "&160A",
+      "nome": "RN160",
+      "extremidades": [
+        "#4",
+        "#4A"
+      ],
+      "comprimento": 7.6
+    },
+    {
+      "id": "&160B",
+      "nome": "RN160",
+      "extremidades": [
+        "#4",
+        "#5"
+      ],
+      "comprimento": 10.8
+    },
+    {
+      "id": "&101G",
+      "nome": "BR101",
+      "extremidades": [
+        "#4A",
+        "#4B"
+      ],
+      "comprimento": 2.1
+    },
+    {
+      "id": "&406A",
+      "nome": "BR406",
+      "extremidades": [
+        "#4B",
+        "#6"
+      ],
+      "comprimento": 20.5
+    },
+    {
+      "id": "&226C",
+      "nome": "BR226",
+      "extremidades": [
+        "#5",
+        "#5A"
+      ],
+      "comprimento": 15.1
+    },
+    {
+      "id": "&160C",
+      "nome": "RN160",
+      "extremidades": [
+        "#5",
+        "#95"
+      ],
+      "comprimento": 52.4
+    },
+    {
+      "id": "&226D",
+      "nome": "BR226",
+      "extremidades": [
+        "#5A",
+        "#63"
+      ],
+      "comprimento": 34.6
+    },
+    {
+      "id": "&304E",
+      "nome": "BR304",
+      "extremidades": [
+        "#5A",
+        "#117"
+      ],
+      "comprimento": 22.6
+    },
+    {
+      "id": "&406B",
+      "nome": "BR406",
+      "extremidades": [
+        "#6",
+        "#15"
+      ],
+      "comprimento": 48
+    },
+    {
+      "id": "&288A",
+      "nome": "RN288",
+      "extremidades": [
+        "#8",
+        "#8A"
+      ],
+      "comprimento": 6.9
+    },
+    {
+      "id": "&118A",
+      "nome": "RN118",
+      "extremidades": [
+        "#8",
+        "#8B"
+      ],
+      "comprimento": 4.1
+    },
+    {
+      "id": "&288B",
+      "nome": "RN288",
+      "extremidades": [
+        "#8",
+        "#8C"
+      ],
+      "comprimento": 4.2
+    },
+    {
+      "id": "&427A",
+      "nome": "BR427",
+      "extremidades": [
+        "#8A",
+        "#8B"
+      ],
+      "comprimento": 6.1
+    },
+    {
+      "id": "&288C",
+      "nome": "RN288",
+      "extremidades": [
+        "#8A",
+        "#61"
+      ],
+      "comprimento": 51.6
+    },
+    {
+      "id": "&427B",
+      "nome": "BR427",
+      "extremidades": [
+        "#8B",
+        "#8C"
+      ],
+      "comprimento": 5.8
+    },
+    {
+      "id": "&118B",
+      "nome": "RN118",
+      "extremidades": [
+        "#8B",
+        "#29"
+      ],
+      "comprimento": 49.8
+    },
+    {
+      "id": "&288D",
+      "nome": "RN288.PB293",
+      "extremidades": [
+        "#8C",
+        "#54"
+      ],
+      "comprimento": 79.6
+    },
+    {
+      "id": "&304F",
+      "nome": "BR304",
+      "extremidades": [
+        "#9",
+        "#9A"
+      ],
+      "comprimento": 6
+    },
+    {
+      "id": "&304G",
+      "nome": "BR304",
+      "extremidades": [
+        "#9",
+        "#90"
+      ],
+      "comprimento": 6.7
+    },
+    {
+      "id": "&233A",
+      "nome": "RN233",
+      "extremidades": [
+        "#9A",
+        "#143"
+      ],
+      "comprimento": 41.2
+    },
+    {
+      "id": "&063A",
+      "nome": "RN063",
+      "extremidades": [
+        "#10",
+        "#17"
+      ],
+      "comprimento": 3.3
+    },
+    {
+      "id": "&101H",
+      "nome": "BR101",
+      "extremidades": [
+        "#10",
+        "#22"
+      ],
+      "comprimento": 22.2
+    },
+    {
+      "id": "&226E",
+      "nome": "BR226",
+      "extremidades": [
+        "#11",
+        "#11A"
+      ],
+      "comprimento": 17.5
+    },
+    {
+      "id": "&226F",
+      "nome": "BR226",
+      "extremidades": [
+        "#11",
+        "#29"
+      ],
+      "comprimento": 67.2
+    },
+    {
+      "id": "&427C",
+      "nome": "BR427",
+      "extremidades": [
+        "#11",
+        "#61"
+      ],
+      "comprimento": 26
+    },
+    {
+      "id": "&226G",
+      "nome": "BR226",
+      "extremidades": [
+        "#11A",
+        "#12"
+      ],
+      "comprimento": 48.8
+    },
+    {
+      "id": "&104A",
+      "nome": "BR104",
+      "extremidades": [
+        "#11A",
+        "#72"
+      ],
+      "comprimento": 74.8
+    },
+    {
+      "id": "&226H",
+      "nome": "BR226",
+      "extremidades": [
+        "#12",
+        "#63"
+      ],
+      "comprimento": 43.9
+    },
+    {
+      "id": "&233B",
+      "nome": "RN233",
+      "extremidades": [
+        "#13",
+        "#13A"
+      ],
+      "comprimento": 5.8
+    },
+    {
+      "id": "&405C",
+      "nome": "BR405",
+      "extremidades": [
+        "#13A",
+        "#18"
+      ],
+      "comprimento": 68
+    },
+    {
+      "id": "&233C",
+      "nome": "RN233",
+      "extremidades": [
+        "#13A",
+        "#28"
+      ],
+      "comprimento": 32.3
+    },
+    {
+      "id": "&269A",
+      "nome": "RN269",
+      "extremidades": [
+        "#14",
+        "#19"
+      ],
+      "comprimento": 38.5
+    },
+    {
+      "id": "&120A",
+      "nome": "RN120",
+      "extremidades": [
+        "#14",
+        "#26"
+      ],
+      "comprimento": 19.3
+    },
+    {
+      "id": "&023A",
+      "nome": "RN023",
+      "extremidades": [
+        "#15",
+        "#16"
+      ],
+      "comprimento": 53.6
+    },
+    {
+      "id": "&406C",
+      "nome": "BR406",
+      "extremidades": [
+        "#15",
+        "#20A"
+      ],
+      "comprimento": 98.8
+    },
+    {
+      "id": "&120B",
+      "nome": "RN120",
+      "extremidades": [
+        "#15",
+        "#88"
+      ],
+      "comprimento": 27.9
+    },
+    {
+      "id": "&226I",
+      "nome": "BR226",
+      "extremidades": [
+        "#18",
+        "#54"
+      ],
+      "comprimento": 71.7
+    },
+    {
+      "id": "&101I",
+      "nome": "BR101",
+      "extremidades": [
+        "#19",
+        "#22"
+      ],
+      "comprimento": 15.7
+    },
+    {
+      "id": "&406D",
+      "nome": "BR406",
+      "extremidades": [
+        "#20",
+        "#20A"
+      ],
+      "comprimento": 5.4
+    },
+    {
+      "id": "&118C",
+      "nome": "RN118",
+      "extremidades": [
+        "#20A",
+        "#42"
+      ],
+      "comprimento": 28.8
+    },
+    {
+      "id": "&003A",
+      "nome": "RN003",
+      "extremidades": [
+        "#22",
+        "#26"
+      ],
+      "comprimento": 32.7
+    },
+    {
+      "id": "&120C",
+      "nome": "RN120",
+      "extremidades": [
+        "#26",
+        "#95"
+      ],
+      "comprimento": 6.3
+    },
+    {
+      "id": "&117B",
+      "nome": "RN117.RN078",
+      "extremidades": [
+        "#28",
+        "#54"
+      ],
+      "comprimento": 43.3
+    },
+    {
+      "id": "&233D",
+      "nome": "RN233",
+      "extremidades": [
+        "#28",
+        "#73"
+      ],
+      "comprimento": 30.8
+    },
+    {
+      "id": "&226J",
+      "nome": "BR226",
+      "extremidades": [
+        "#29",
+        "#143"
+      ],
+      "comprimento": 30.9
+    },
+    {
+      "id": "&118D",
+      "nome": "RN118",
+      "extremidades": [
+        "#42",
+        "#90"
+      ],
+      "comprimento": 42.8
+    },
+    {
+      "id": "&226K",
+      "nome": "BR226",
+      "extremidades": [
+        "#54",
+        "#73"
+      ],
+      "comprimento": 48.1
+    },
+    {
+      "id": "&120D",
+      "nome": "RN120",
+      "extremidades": [
+        "#63",
+        "#95"
+      ],
+      "comprimento": 29.6
+    },
+    {
+      "id": "&304H",
+      "nome": "BR304",
+      "extremidades": [
+        "#72",
+        "#88"
+      ],
+      "comprimento": 44.2
+    },
+    {
+      "id": "&304I",
+      "nome": "BR304",
+      "extremidades": [
+        "#72",
+        "#90"
+      ],
+      "comprimento": 72
+    },
+    {
+      "id": "&226L",
+      "nome": "BR226",
+      "extremidades": [
+        "#73",
+        "#143"
+      ],
+      "comprimento": 14.4
+    },
+    {
+      "id": "&304J",
+      "nome": "BR304",
+      "extremidades": [
+        "#88",
+        "#117"
+      ],
+      "comprimento": 21.5
+    }
+  ]
+}

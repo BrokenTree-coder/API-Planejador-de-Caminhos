@@ -1,0 +1,11 @@
+npm install express
+npm install jsonwebtoken
+npm install bcrypt
+npm install express-validator
+npm install lowdb
+npm install dotenv
+npm install pug
+npm install mongodb
+npm install mongoose
+adicionar | "type" : "module" | no package.json
+npm install express jsonwebtoken bcrypt express-validator lowdb dotenv pug mongodb mongoose

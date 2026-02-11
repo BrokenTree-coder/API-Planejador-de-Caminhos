@@ -1,0 +1,49 @@
+extends layouts/main.pug
+
+block content
+  div.container
+    h1 Bem-vindo ao Planejador de Caminhos
+    p Esta é a lista de todos os pontos e rotas cadastrados no sistema.
+
+    // --- Tabela de Pontos ---
+    h2 Pontos Cadastrados
+    if pontos.length > 0
+      table.data-table
+        thead
+          tr
+            th ID
+            th Nome
+            th Latitude
+            th Longitude
+        tbody
+          each ponto in pontos
+            tr
+              td= ponto.id
+              td= ponto.nome
+              td= ponto.latitude
+              td= ponto.longitude
+    else
+      p Nenhum ponto cadastrado no momento.
+    
+    // --- Tabela de Rotas ---
+    h2 Rotas Cadastradas
+    if rotas.length > 0
+      table.data-table
+        thead
+          tr
+            th ID
+            th Nome
+            th Extremidade 1
+            th Extremidade 2
+            th Comprimento (km)
+        tbody
+          each rota in rotas
+            tr
+              td= rota.id
+              td= rota.nome
+              td= rota.extremidades[0]
+              td= rota.extremidades[1]
+              td= rota.comprimento
+    else
+      p Nenhuma rota cadastrada no momento.
+    
